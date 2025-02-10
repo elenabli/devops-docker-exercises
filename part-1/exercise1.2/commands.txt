@@ -1,0 +1,91 @@
+(base) elenablinova@MacBook-Pro ~ % docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS                        PORTS     NAMES
+ab89ea6e2737   nginx     "/docker-entrypoint.…"   10 minutes ago   Up 10 minutes                 80/tcp    amazing_engelbart
+94c32082c284   nginx     "/docker-entrypoint.…"   10 minutes ago   Exited (0) 7 minutes ago                suspicious_wright
+16d58dcac52d   nginx     "/docker-entrypoint.…"   10 minutes ago   Exited (0) 8 minutes ago                goofy_sanderson
+719ed8a4a54a   ubuntu    "/bin/bash"              4 hours ago      Exited (137) 16 minutes ago             gallant_jang
+193a750b22f1   ubuntu    "/bin/bash"              4 hours ago      Exited (129) 4 hours ago                nifty_ardinghelli
+01610cb46dd7   ubuntu    "/bin/bash"              4 hours ago      Exited (0) 4 hours ago                  optimistic_zhukovsky
+(base) elenablinova@MacBook-Pro ~ % docker image ls
+REPOSITORY                                        TAG       IMAGE ID       CREATED         SIZE
+nginx                                             latest    9b1b7be1ffa6   4 days ago      197MB
+ubuntu                                            latest    c3d1a3432580   2 weeks ago     101MB
+homeautomationsystem-backend                      latest    73f00c42d0f8   11 months ago   303MB
+homeautomationsystem-frontend                     latest    e37ec75b6f44   11 months ago   361MB
+elenablinova/calculator                           latest    22edc41883e6   11 months ago   519MB
+registry.hub.docker.com/elenablinova/calculator   latest    22edc41883e6   11 months ago   519MB
+elenablinova/fahrtocel                            latest    c6c718d6de82   11 months ago   519MB
+registry.hub.docker.com/elenablinova/fahrtocel    latest    c6c718d6de82   11 months ago   519MB
+fahrtocel                                         latest    b9fd22ef3dbc   11 months ago   519MB
+mariadb                                           latest    bedcf1f759b8   11 months ago   388MB
+maven                                             latest    000f3d182622   14 months ago   503MB
+gcr.io/k8s-minikube/kicbase                       v0.0.42   62753ecb37c4   15 months ago   1.11GB
+hello-world                                       latest    ee301c921b8a   21 months ago   9.14kB
+(base) elenablinova@MacBook-Pro ~ % docker stop ab
+ab
+
+
+(base) elenablinova@MacBook-Pro ~ % docker system prune
+WARNING! This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all dangling images
+  - unused build cache
+
+Are you sure you want to continue? [y/N] y
+Deleted Networks:
+minikube
+homeautomationsystem_homeautomation
+
+Deleted build cache objects:
+ahojsxfzk1tougwgkjjyd5ymx
+jlecghjhoq7rnemt0ff266wcg
+yw1m4c32er7xlakxyxqc7aosw
+s1prwlgiepgg7uw2ed2wrqniy
+fje5a44hl3oj9eqch2dhcyhfk
+08b2ua0zc9jcvymgbs97ywda6
+oa0fgdegjikgffusf6f3im8t5
+jj0rbvoqbxew7t74d2cow31mh
+dd6lno0ccr3ynzvchekpwi8e8
+31hcttaqm7j348wzo40e5030w
+titypbsbrz3h8256ngyraz3gh
+zlk1wpk7temyecj2du7senjqb
+1x0k9x0vep9026mvco5d5ftrw
+8qghtfsraef1ooesa26g75l1k
+9nyh3xu5s52r4n5csktfmd7jm
+fznk2io4a5b7cfvjo69omrauo
+phksp21f185pu8k0u0hffjeyr
+rfewo8mzatkryhj3so8p2rms2
+jwpooa331gxmztbqxrigax0mc
+6jm3ip5idim9okt3bz0ylw078
+eqqc5pwhq68pj7z6nzm6c5x32
+g3wkradx9io4yb492y5h87qd5
+tqtm46ag2zphm6oc0vffcm5lp
+6v80xfzehfs94inwap0qo7bvw
+mn3oy4y4umb046n5t237ecwmt
+ihm15cein8sprgu161z7u41yw
+nz2jdnqwmr2lqtiow1dee5iow
+um7uq3s2mayq8wlxnkqgmivka
+u6949htotnhie22atj8764hhf
+ihv5lb5hjak0zxpqd0sik1kam
+
+Total reclaimed space: 348.8MB
+(base) elenablinova@MacBook-Pro ~ % docker image ls    
+REPOSITORY                                        TAG       IMAGE ID       CREATED         SIZE
+nginx                                             latest    9b1b7be1ffa6   4 days ago      197MB
+ubuntu                                            latest    c3d1a3432580   2 weeks ago     101MB
+homeautomationsystem-backend                      latest    73f00c42d0f8   11 months ago   303MB
+homeautomationsystem-frontend                     latest    e37ec75b6f44   11 months ago   361MB
+elenablinova/calculator                           latest    22edc41883e6   11 months ago   519MB
+registry.hub.docker.com/elenablinova/calculator   latest    22edc41883e6   11 months ago   519MB
+elenablinova/fahrtocel                            latest    c6c718d6de82   11 months ago   519MB
+registry.hub.docker.com/elenablinova/fahrtocel    latest    c6c718d6de82   11 months ago   519MB
+fahrtocel                                         latest    b9fd22ef3dbc   11 months ago   519MB
+mariadb                                           latest    bedcf1f759b8   11 months ago   388MB
+maven                                             latest    000f3d182622   14 months ago   503MB
+gcr.io/k8s-minikube/kicbase                       v0.0.42   62753ecb37c4   15 months ago   1.11GB
+hello-world                                       latest    ee301c921b8a   21 months ago   9.14kB
+
+
+(base) elenablinova@MacBook-Pro ~ % docker ps -a       
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
